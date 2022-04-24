@@ -46,22 +46,22 @@ function App(props) {
   <div>
     
 
-<div className="container my-3">
  {/* <Textform showAlert = {showAlert} Mode={Mode} heading = ' Enter the text to analyze'/> */}
  {/* <About/> */}
-  <Alert Alert={alert} />
 
  <BrowserRouter>
- <Navbar Mode={Mode}  toggleMode={toggleMode} title =  'Words Counter' />
+ <Navbar Mode={Mode}  toggleMode={toggleMode} title =  'Words Manager' />
+  <Alert Alert={alert} />
+<div className="container my-3">
     <Routes>
       <Route exact path="/" element={<Textform showAlert = {showAlert} Mode={Mode} heading = ' Enter the text to analyze'/>} />
-      <Route exact path="/about" element={<About/>} />
+      <Route exact path="/about" element={<About Mode={Mode}/>} />
       
     </Routes>
+  </div>
   </BrowserRouter>
 
 
-  </div>
 
     
     </div>
